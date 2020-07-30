@@ -1,0 +1,15 @@
+{
+    "vendor": "TV7",
+    "icon": "tv7icon_80x80.png",
+    "largeIcon": "tv7icon130x130.png",
+    "bgColor": "white",
+    "iconColor": "white",
+    "main": "index.html",
+    "id": "fi.tv7.webosapp",
+    "title": "TV7",
+    "appDescription": "TV7 LG smart TV application",
+    "type": "web",
+    "version": "0.0.1",
+    "resolution": "1920x1080",
+    "disableBackHistoryAPI": true
+}
