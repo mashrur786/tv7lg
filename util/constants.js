@@ -31,3 +31,12 @@ var playIcon = '../images/play_circle_black.svg';
 var pauseIcon = '../images/pause_circle_black.svg';
 
 var fromPage = 'fromPage';
+
+// keycodes
+var LEFT = 37;
+var UP = 38;
+var RIGHT = 39;
+var DOWN = 40;
+var OK = 13;
+var RETURN = 461;
+var ESC = 27;
