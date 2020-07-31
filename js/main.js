@@ -1,8 +1,6 @@
 var locale = null;
 var modalVisible = false;
-
-// var playerPage = 'player.html';
-
+var settingsMenuOpen = false;
 
 window.onload = function() {
 	init();
@@ -48,44 +46,49 @@ function init() {
 			split = contentId.split('_');
 		}
 
-
 		if (keyCode === 37 && split) {
 			//LEFT arrow
 			if (contentId === 'r_1_1' || contentId === 'r_2_1') {
-				// Activate settings icon
+				// Activate settings menu
+				settingsMenuOpen = true;
 				newId = 'r_0_0';
 			}
-			else if (!modalVisible) {
-				// activate content item
-				newId = split[0] + '_' + split[1] + '_' + (Number(split[2]) - 1);
-			}
-			else {
+			else if (modalVisible) {
 				// exit modal yes button
 				newId = 'yesButton_' + (Number(split[1]) - 1);
+			}
+			else if (!settingsMenuOpen) {
+				// activate content item
+				newId = split[0] + '_' + split[1] + '_' + (Number(split[2]) - 1);
 			}
 		}
 		else if (keyCode === 38 && split) {
 			//UP arrow - activate content item
-			newId = split[0] + '_' + (Number(split[1]) - 1) + '_' + split[2];
+			if (!settingsMenuOpen && !modalVisible) {
+				newId = split[0] + '_' + (Number(split[1]) - 1) + '_' + split[2];
+			}
 		}
 		else if (keyCode === 39 && split) {
 			//RIGHT arrow
 			if (contentId === 'r_0_0') {
-				// Activate settings icon
+				// from settings menu - activate content item
+				settingsMenuOpen = false;
 				newId = 'r_1_1';
 			}
-			else if (!modalVisible) {
-				// activate content item
-				newId = split[0] + '_' + split[1] + '_' + (Number(split[2]) + 1);
-			}
-			else {
+			else if (modalVisible) {
 				// exit modal cancel button
 				newId = 'cancelButton_' + (Number(split[1]) + 1);
+			}
+			else {
+				// from content item - activate content item
+				newId = split[0] + '_' + split[1] + '_' + (Number(split[2]) + 1);
 			}
 		}
 		else if (keyCode === 40 && split) {
 			//DOWN arrow - activate content item
-			newId = split[0] + '_' + (Number(split[1]) + 1) + '_' + split[2];
+			if (!settingsMenuOpen && !modalVisible) {
+				newId = split[0] + '_' + (Number(split[1]) + 1) + '_' + split[2];
+			}
 		}
 		else if (keyCode === 13) {
 			//OK button
@@ -130,7 +133,11 @@ function init() {
 		}
 		else if (keyCode === 461 || keyCode === 27) {
 			//RETURN button
-			if (!modalVisible) {
+			if(settingsMenuOpen) {
+				settingsMenuOpen = false;
+				activateContentElement();
+			}
+			else if (!modalVisible) {
 				showExitModal();
 			}
 			else {
