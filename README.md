@@ -59,4 +59,4 @@ Clone this repository to your computer disk.
   - Command CLI command and instructions are [here](http://webostv.developer.lge.com/sdk/tools/using-webos-tv-cli/).
 
 ### License
- - [MIT](https://github.com/heaven-dev/tv7samsung/blob/master/LICENSE.md)
+ - [MIT](https://github.com/heaven-dev/tv7lg/blob/master/LICENSE.md)
