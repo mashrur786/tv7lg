@@ -42,3 +42,9 @@ var DOWN = 40;
 var OK = 13;
 var RETURN = 461;
 var ESC = 27;
+
+var settingsMenuId = 'r_1_0';
+var taivasContentId = 'r_1_1';
+var exitYesButton = 'exitYesButton';
+var exitCancelButton = 'exitCancelButton';
+var mainActiveElementId = 'mainActiveElementId';
