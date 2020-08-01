@@ -6,7 +6,7 @@
 
 ## Instructions
 
-### Other platforms (LG and Android)
+### Other platforms (Samsung and Android)
 This application is also implemented to __Samsung__ and __Android__ smart TV platforms:
   - Repository of __Samsung__ application is [here](https://github.com/heaven-dev/tv7samsung).
   - Repository of __Android__ application is [here](https://github.com/heaven-dev/tv7android).
