@@ -55,7 +55,6 @@ Clone this repository to your computer disk.
   - If your computer OS is windows you need to modify the script to be compatible to windows OS.
 
 ### Run application on TV
-  - Not verified yet.
   - Instructions how to test are [here](https://webostv.developer.lge.com/develop/app-test/).
 
 ### Notes
