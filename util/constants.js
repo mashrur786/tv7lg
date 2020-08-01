@@ -15,11 +15,13 @@ var mainPageShort = 'html/main.html';
 var localizationPageShort = 'html/localization.html';
 
 var localizationKey = 'tv7Localization';
+var localeEn = 'menuItem_0';
 var localeFi = 'menuItem_1';
 var localeEe = 'menuItem_2';
 var localeSe = 'menuItem_3';
 var localeRu = 'menuItem_4';
 
+var en = 'en';
 var fi = 'fi';
 var ee = 'ee';
 var se = 'se';
