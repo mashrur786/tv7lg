@@ -48,3 +48,5 @@ var taivasContentId = 'r_1_1';
 var exitYesButton = 'exitYesButton';
 var exitCancelButton = 'exitCancelButton';
 var mainActiveElementId = 'mainActiveElementId';
+
+var streamType = 'application/x-mpegURL';
